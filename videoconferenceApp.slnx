@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/VideoConference.API/VideoConference.API.csproj" />
+    <Project Path="src/VideoConference.Application/VideoConference.Application.csproj" />
+    <Project Path="src/VideoConference.Domain/VideoConference.Domain.csproj" />
+    <Project Path="src/VideoConference.Infrastructure/VideoConference.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/VideoConference.Tests/VideoConference.Tests.csproj" />
+  </Folder>
+</Solution>

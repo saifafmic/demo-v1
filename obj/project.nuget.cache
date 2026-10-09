@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "CNbmWA2bZCw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Youssef Som3a\\Desktop\\lab2\\videoconferenceApp\\videoconferenceApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Youssef Som3a\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.11\\microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "C:\\Users\\Youssef Som3a\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "9AIOrfKvzf4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ad\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.31\\microsoft.netcore.app.ref.8.0.31.nupkg.sha512",
+    "C:\\Users\\ad\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.31\\microsoft.windowsdesktop.app.ref.8.0.31.nupkg.sha512",
+    "C:\\Users\\ad\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.31\\microsoft.aspnetcore.app.ref.8.0.31.nupkg.sha512"
+  ],
+  "logs": []
+}

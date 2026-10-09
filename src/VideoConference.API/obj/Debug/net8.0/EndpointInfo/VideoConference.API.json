@@ -1,0 +1,3151 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "VideoConference API",
+    "description": "ASP.NET Core Web API for Video Conferencing with LiveKit WebRTC, Microsoft SQL Server, and Clean Architecture.",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Admin/users": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Get all registered users (Admin only).",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Admin/users/{id}/activate": {
+      "put": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Activate a user account (Admin only).",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Admin/users/{id}/deactivate": {
+      "put": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Deactivate a user account and immediately revoke access (Admin only).",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Admin/meetings": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Get all meetings across the platform (Admin only).",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Admin/history": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Get complete global audit history logs (Admin only).",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingHistoryDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingHistoryDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingHistoryDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Admin/statistics": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Get overall platform statistics (total users, meetings, recordings) (Admin only).",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminStatsDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminStatsDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminStatsDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Register a new user account.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Login and obtain an application JWT access token and refresh token.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/refresh": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Refresh an expired or expiring access token using a valid refresh token.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Log out the currently authenticated user and revoke refresh tokens.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/me": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Get current authenticated user profile.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/profile": {
+      "put": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Update current authenticated user profile or password.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDtoApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Overall health status check.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/health/live": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Liveness probe: responds if the Web API process is running.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/health/ready": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Readiness probe: responds if the Web API can connect to database.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/meetings/{meetingId}/invitations": {
+      "post": {
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Send an invitation to a meeting by recipient email.",
+        "parameters": [
+          {
+            "name": "meetingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateInvitationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateInvitationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateInvitationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvitationDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvitationDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvitationDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "List invitations sent for a meeting.",
+        "parameters": [
+          {
+            "name": "meetingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvitationDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvitationDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvitationDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/invitations/{token}/accept": {
+      "post": {
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Accept a meeting invitation using the invitation token.",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Meetings": {
+      "post": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Create and schedule a new meeting. Generates a unique LiveKit room and public link.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMeetingRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMeetingRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMeetingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Get all meetings hosted or joined by the current user.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Meetings/upcoming": {
+      "get": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Get upcoming and active meetings for current user.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Meetings/{id}": {
+      "get": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Get meeting details by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Update meeting metadata (Host or Admin only).",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMeetingRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMeetingRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMeetingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Delete a meeting (Host or Admin only).",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Meetings/token/{publicToken}": {
+      "get": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Look up meeting information by its public meeting link token (for join landing page).",
+        "parameters": [
+          {
+            "name": "publicToken",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingDtoApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Meetings/{id}/join": {
+      "post": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Join a meeting. Validates status, password, and bans, then generates and returns the LiveKit participant JWT.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JoinMeetingRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JoinMeetingRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/JoinMeetingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JoinMeetingResponseApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JoinMeetingResponseApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JoinMeetingResponseApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Meetings/{id}/leave": {
+      "post": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Leave a meeting and update participant presence status.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Meetings/{id}/end": {
+      "post": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "End a meeting for all participants (Host, CoHost, or Admin only).",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Meetings/history": {
+      "get": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Get meeting history logs for current user across meetings.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingHistoryDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingHistoryDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingHistoryDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Meetings/{id}/history": {
+      "get": {
+        "tags": [
+          "Meetings"
+        ],
+        "summary": "Get audit history logs for a specific meeting.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingHistoryDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingHistoryDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingHistoryDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meetings/{meetingId}/Messages": {
+      "get": {
+        "tags": [
+          "Messages"
+        ],
+        "summary": "Retrieve stored chat messages for a meeting.",
+        "parameters": [
+          {
+            "name": "meetingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingMessageDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingMessageDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingMessageDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Messages"
+        ],
+        "summary": "Save a chat message for archival/persistence.",
+        "parameters": [
+          {
+            "name": "meetingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingMessageDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingMessageDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeetingMessageDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Notifications": {
+      "get": {
+        "tags": [
+          "Notifications"
+        ],
+        "summary": "Get list of notifications for the current user.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Notifications/{id}/read": {
+      "post": {
+        "tags": [
+          "Notifications"
+        ],
+        "summary": "Mark a notification as read.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Notifications/read-all": {
+      "post": {
+        "tags": [
+          "Notifications"
+        ],
+        "summary": "Mark all notifications as read for current user.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meetings/{meetingId}/Participants": {
+      "get": {
+        "tags": [
+          "Participants"
+        ],
+        "summary": "Get the list of participants for a meeting.",
+        "parameters": [
+          {
+            "name": "meetingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParticipantDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParticipantDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParticipantDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meetings/{meetingId}/Participants/{participantId}/remove": {
+      "post": {
+        "tags": [
+          "Participants"
+        ],
+        "summary": "Remove a participant from the meeting (Host, CoHost, or Admin only).",
+        "parameters": [
+          {
+            "name": "meetingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "participantId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meetings/{meetingId}/Participants/{participantId}/ban": {
+      "post": {
+        "tags": [
+          "Participants"
+        ],
+        "summary": "Ban a participant from re-entering the meeting (Host, CoHost, or Admin only).",
+        "parameters": [
+          {
+            "name": "meetingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "participantId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meetings/{meetingId}/Participants/{participantId}/promote": {
+      "post": {
+        "tags": [
+          "Participants"
+        ],
+        "summary": "Promote a participant to Co-Host role (Host, CoHost, or Admin only).",
+        "parameters": [
+          {
+            "name": "meetingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "participantId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meetings/{meetingId}/Participants/{participantId}/demote": {
+      "post": {
+        "tags": [
+          "Participants"
+        ],
+        "summary": "Demote a Co-Host back to regular Participant role (Host or Admin only).",
+        "parameters": [
+          {
+            "name": "meetingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "participantId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meetings/{id}/recording/start": {
+      "post": {
+        "tags": [
+          "Recordings"
+        ],
+        "summary": "Start recording the meeting (Host or Admin only).",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StartRecordingRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StartRecordingRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StartRecordingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingDtoApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meetings/{id}/recording/stop": {
+      "post": {
+        "tags": [
+          "Recordings"
+        ],
+        "summary": "Stop active recording for the meeting (Host or Admin only).",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingDtoApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meetings/{id}/recordings": {
+      "get": {
+        "tags": [
+          "Recordings"
+        ],
+        "summary": "List recordings metadata for this meeting.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingDtoListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingDtoListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingDtoListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Search": {
+      "get": {
+        "tags": [
+          "Search"
+        ],
+        "summary": "Search meetings by title/description and users (if Admin).",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResultDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResultDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResultDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdminStatsDto": {
+        "type": "object",
+        "properties": {
+          "totalUsers": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "activeUsers": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMeetings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "liveMeetings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scheduledMeetings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalRecordings": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminStatsDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AdminStatsDto"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "boolean"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateInvitationRequest": {
+        "required": [
+          "recipientEmail"
+        ],
+        "type": "object",
+        "properties": {
+          "recipientEmail": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateMeetingRequest": {
+        "required": [
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "isWaitingRoomEnabled": {
+            "type": "boolean"
+          },
+          "scheduledStartAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "scheduledEndAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvitationDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "meetingId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "meetingTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "recipientEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "invitationUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/InvitationStatus"
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvitationDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/InvitationDto"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvitationDtoListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvitationDto"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvitationStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "JoinMeetingRequest": {
+        "type": "object",
+        "properties": {
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "JoinMeetingResponse": {
+        "type": "object",
+        "properties": {
+          "serverUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "roomName": {
+            "type": "string",
+            "nullable": true
+          },
+          "participantIdentity": {
+            "type": "string",
+            "nullable": true
+          },
+          "participantName": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "$ref": "#/components/schemas/ParticipantRole"
+          },
+          "isHost": {
+            "type": "boolean"
+          },
+          "meetingId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "JoinMeetingResponseApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/JoinMeetingResponse"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequest": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "user": {
+            "$ref": "#/components/schemas/UserDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginResponseApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/LoginResponse"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeetingDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "roomName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hostUserId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "hostDisplayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPasswordProtected": {
+            "type": "boolean"
+          },
+          "isWaitingRoomEnabled": {
+            "type": "boolean"
+          },
+          "status": {
+            "$ref": "#/components/schemas/MeetingStatus"
+          },
+          "scheduledStartAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "scheduledEndAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "startedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "publicToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "meetingLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "activeParticipantCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeetingDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/MeetingDto"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeetingDtoListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MeetingDto"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeetingHistoryDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "meetingId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "meetingTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "userDisplayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeetingHistoryDtoListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MeetingHistoryDto"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeetingMessageDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "meetingId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "senderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "sentAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeetingMessageDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/MeetingMessageDto"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeetingMessageDtoListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MeetingMessageDto"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeetingStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "NotificationDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "isRead": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotificationDtoListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationDto"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParticipantDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "meetingId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "$ref": "#/components/schemas/ParticipantRole"
+          },
+          "joinedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "leftAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isAllowed": {
+            "type": "boolean"
+          },
+          "isBanned": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParticipantDtoListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ParticipantDto"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParticipantRole": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      },
+      "RecordingDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "meetingId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "storagePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "duration": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecordingDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/RecordingDto"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecordingDtoListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecordingDto"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefreshTokenRequest": {
+        "required": [
+          "refreshToken"
+        ],
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterRequest": {
+        "required": [
+          "email",
+          "firstName",
+          "lastName",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 6,
+            "type": "string"
+          },
+          "firstName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "lastName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SearchResultDto": {
+        "type": "object",
+        "properties": {
+          "meetings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MeetingDto"
+            },
+            "nullable": true
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SearchResultDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/SearchResultDto"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SendMessageRequest": {
+        "required": [
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "senderName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StartRecordingRequest": {
+        "type": "object",
+        "properties": {
+          "outputFileName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateMeetingRequest": {
+        "required": [
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "removePassword": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isWaitingRoomEnabled": {
+            "type": "boolean"
+          },
+          "status": {
+            "$ref": "#/components/schemas/MeetingStatus"
+          },
+          "scheduledStartAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "scheduledEndAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateProfileRequest": {
+        "required": [
+          "firstName",
+          "lastName"
+        ],
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "lastName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "$ref": "#/components/schemas/UserRole"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/UserDto"
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDtoListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserDto"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserRole": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme.\r\n\r\nEnter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOi...\"",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

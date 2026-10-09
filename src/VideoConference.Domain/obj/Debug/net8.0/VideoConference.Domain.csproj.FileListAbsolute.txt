@@ -1,0 +1,23 @@
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\bin\Debug\net8.0\VideoConference.Domain.deps.json
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\bin\Debug\net8.0\VideoConference.Domain.dll
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\bin\Debug\net8.0\VideoConference.Domain.pdb
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.AssemblyInfoInputs.cache
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.AssemblyInfo.cs
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.dll
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\obj\Debug\net8.0\refint\VideoConference.Domain.dll
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.pdb
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Domain\obj\Debug\net8.0\ref\VideoConference.Domain.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\bin\Debug\net8.0\VideoConference.Domain.deps.json
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\bin\Debug\net8.0\VideoConference.Domain.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\bin\Debug\net8.0\VideoConference.Domain.pdb
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.AssemblyInfoInputs.cache
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.AssemblyInfo.cs
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.sourcelink.json
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\obj\Debug\net8.0\refint\VideoConference.Domain.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\obj\Debug\net8.0\VideoConference.Domain.pdb
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Domain\obj\Debug\net8.0\ref\VideoConference.Domain.dll

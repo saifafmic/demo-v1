@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Youssef Som3a\\Desktop\\lab2\\videoconferenceApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{76A5CE4D-8847-5384-5355-D0AC781A1EEE}|src\\VideoConference.API\\VideoConference.API.csproj|c:\\users\\youssef som3a\\desktop\\lab2\\videoconferenceapp\\src\\videoconference.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A5CE4D-8847-5384-5355-D0AC781A1EEE}|src\\VideoConference.API\\VideoConference.API.csproj|solutionrelative:src\\videoconference.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Youssef Som3a\\Desktop\\lab2\\videoconferenceApp\\src\\VideoConference.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\VideoConference.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Youssef Som3a\\Desktop\\lab2\\videoconferenceApp\\src\\VideoConference.API\\Program.cs",
+              "RelativeToolTip": "src\\VideoConference.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T14:12:08.062Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

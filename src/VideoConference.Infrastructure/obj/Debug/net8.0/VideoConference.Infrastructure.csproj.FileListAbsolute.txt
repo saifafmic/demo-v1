@@ -1,0 +1,39 @@
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Infrastructure.deps.json
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Infrastructure.runtimeconfig.json
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Infrastructure.dll
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Infrastructure.pdb
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Application.dll
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Domain.dll
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Application.pdb
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Domain.pdb
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.AssemblyInfo.cs
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoCon.DA2D2903.Up2Date
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.dll
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\refint\VideoConference.Infrastructure.dll
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.pdb
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.genruntimeconfig.cache
+C:\Users\Youssef Som3a\Desktop\lab2\videoconferenceApp\src\VideoConference.Infrastructure\obj\Debug\net8.0\ref\VideoConference.Infrastructure.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Infrastructure.deps.json
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Infrastructure.runtimeconfig.json
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Infrastructure.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Infrastructure.pdb
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Application.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Domain.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Application.pdb
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\bin\Debug\net8.0\VideoConference.Domain.pdb
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.AssemblyInfo.cs
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.sourcelink.json
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoCon.DA2D2903.Up2Date
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\refint\VideoConference.Infrastructure.dll
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.pdb
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\VideoConference.Infrastructure.genruntimeconfig.cache
+C:\Users\ad\dev\Video-Conference-Info-Bank\src\VideoConference.Infrastructure\obj\Debug\net8.0\ref\VideoConference.Infrastructure.dll

@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VideoConference.API</name>
+    </assembly>
+    <members>
+        <member name="M:VideoConference.API.Controllers.AdminController.GetUsers">
+            <summary>
+            Get all registered users (Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AdminController.ActivateUser(System.Guid)">
+            <summary>
+            Activate a user account (Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AdminController.DeactivateUser(System.Guid)">
+            <summary>
+            Deactivate a user account and immediately revoke access (Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AdminController.GetAllMeetings">
+            <summary>
+            Get all meetings across the platform (Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AdminController.GetGlobalHistory">
+            <summary>
+            Get complete global audit history logs (Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AdminController.GetStatistics">
+            <summary>
+            Get overall platform statistics (total users, meetings, recordings) (Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AuthController.Register(VideoConference.Application.DTOs.RegisterRequest)">
+            <summary>
+            Register a new user account.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AuthController.Login(VideoConference.Application.DTOs.LoginRequest)">
+            <summary>
+            Login and obtain an application JWT access token and refresh token.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AuthController.RefreshToken(VideoConference.Application.DTOs.RefreshTokenRequest)">
+            <summary>
+            Refresh an expired or expiring access token using a valid refresh token.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AuthController.Logout">
+            <summary>
+            Log out the currently authenticated user and revoke refresh tokens.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AuthController.GetCurrentUser">
+            <summary>
+            Get current authenticated user profile.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.AuthController.UpdateProfile(VideoConference.Application.DTOs.UpdateProfileRequest)">
+            <summary>
+            Update current authenticated user profile or password.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.HealthController.GetHealth">
+            <summary>
+            Overall health status check.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.HealthController.GetLive">
+            <summary>
+            Liveness probe: responds if the Web API process is running.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.HealthController.GetReady">
+            <summary>
+            Readiness probe: responds if the Web API can connect to database.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.InvitationsController.CreateInvitation(System.Guid,VideoConference.Application.DTOs.CreateInvitationRequest)">
+            <summary>
+            Send an invitation to a meeting by recipient email.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.InvitationsController.GetInvitations(System.Guid)">
+            <summary>
+            List invitations sent for a meeting.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.InvitationsController.AcceptInvitation(System.String)">
+            <summary>
+            Accept a meeting invitation using the invitation token.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.CreateMeeting(VideoConference.Application.DTOs.CreateMeetingRequest)">
+            <summary>
+            Create and schedule a new meeting. Generates a unique LiveKit room and public link.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.GetUserMeetings">
+            <summary>
+            Get all meetings hosted or joined by the current user.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.GetUpcomingMeetings">
+            <summary>
+            Get upcoming and active meetings for current user.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.GetMeetingById(System.Guid)">
+            <summary>
+            Get meeting details by ID.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.GetMeetingByPublicToken(System.String)">
+            <summary>
+            Look up meeting information by its public meeting link token (for join landing page).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.UpdateMeeting(System.Guid,VideoConference.Application.DTOs.UpdateMeetingRequest)">
+            <summary>
+            Update meeting metadata (Host or Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.DeleteMeeting(System.Guid)">
+            <summary>
+            Delete a meeting (Host or Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.JoinMeeting(System.Guid,VideoConference.Application.DTOs.JoinMeetingRequest)">
+            <summary>
+            Join a meeting. Validates status, password, and bans, then generates and returns the LiveKit participant JWT.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.LeaveMeeting(System.Guid)">
+            <summary>
+            Leave a meeting and update participant presence status.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.EndMeeting(System.Guid)">
+            <summary>
+            End a meeting for all participants (Host, CoHost, or Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.GetUserHistory">
+            <summary>
+            Get meeting history logs for current user across meetings.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MeetingsController.GetMeetingHistory(System.Guid)">
+            <summary>
+            Get audit history logs for a specific meeting.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MessagesController.GetMessages(System.Guid)">
+            <summary>
+            Retrieve stored chat messages for a meeting.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.MessagesController.SaveMessage(System.Guid,VideoConference.Application.DTOs.SendMessageRequest)">
+            <summary>
+            Save a chat message for archival/persistence.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.NotificationsController.GetNotifications">
+            <summary>
+            Get list of notifications for the current user.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.NotificationsController.MarkAsRead(System.Guid)">
+            <summary>
+            Mark a notification as read.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.NotificationsController.MarkAllAsRead">
+            <summary>
+            Mark all notifications as read for current user.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.ParticipantsController.GetParticipants(System.Guid)">
+            <summary>
+            Get the list of participants for a meeting.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.ParticipantsController.RemoveParticipant(System.Guid,System.Guid)">
+            <summary>
+            Remove a participant from the meeting (Host, CoHost, or Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.ParticipantsController.BanParticipant(System.Guid,System.Guid)">
+            <summary>
+            Ban a participant from re-entering the meeting (Host, CoHost, or Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.ParticipantsController.PromoteParticipant(System.Guid,System.Guid)">
+            <summary>
+            Promote a participant to Co-Host role (Host, CoHost, or Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.ParticipantsController.DemoteParticipant(System.Guid,System.Guid)">
+            <summary>
+            Demote a Co-Host back to regular Participant role (Host or Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.RecordingsController.StartRecording(System.Guid,VideoConference.Application.DTOs.StartRecordingRequest)">
+            <summary>
+            Start recording the meeting (Host or Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.RecordingsController.StopRecording(System.Guid)">
+            <summary>
+            Stop active recording for the meeting (Host or Admin only).
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.RecordingsController.GetRecordings(System.Guid)">
+            <summary>
+            List recordings metadata for this meeting.
+            </summary>
+        </member>
+        <member name="M:VideoConference.API.Controllers.SearchController.Search(System.String)">
+            <summary>
+            Search meetings by title/description and users (if Admin).
+            </summary>
+        </member>
+    </members>
+</doc>
