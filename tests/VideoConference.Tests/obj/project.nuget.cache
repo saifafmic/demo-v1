@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UMI221j/rOc=",
+  "dgSpecHash": "MEn8tyKnVxg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj",
+  "projectFilePath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ad\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ad\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj": {}
+    "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj": {
+    "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj",
+        "projectUniqueName": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj",
         "projectName": "VideoConference.API",
-        "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj",
+        "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj",
         "packagesPath": "C:\\Users\\ad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\obj\\",
+        "outputPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj": {
-                "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj"
+              "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj": {
+                "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj"
               },
-              "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj"
+              "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj": {
+                "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj"
               }
             }
           }
@@ -123,14 +123,14 @@
         }
       }
     },
-    "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj": {
+    "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj",
+        "projectUniqueName": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj",
         "projectName": "VideoConference.Application",
-        "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj",
+        "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj",
         "packagesPath": "C:\\Users\\ad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\obj\\",
+        "outputPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -152,8 +152,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj": {
-                "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj"
+              "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj": {
+                "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj"
               }
             }
           }
@@ -214,14 +214,14 @@
         }
       }
     },
-    "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj": {
+    "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj",
         "projectName": "VideoConference.Domain",
-        "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj",
+        "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj",
         "packagesPath": "C:\\Users\\ad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\obj\\",
+        "outputPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -295,14 +295,14 @@
         }
       }
     },
-    "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj": {
+    "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj",
         "projectName": "VideoConference.Infrastructure",
-        "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj",
+        "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\obj\\",
+        "outputPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -324,11 +324,11 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj": {
-                "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj"
+              "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj": {
+                "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj"
               },
-              "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj": {
-                "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj"
+              "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj": {
+                "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj"
               }
             }
           }
@@ -407,14 +407,14 @@
         }
       }
     },
-    "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj": {
+    "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj",
+        "projectUniqueName": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj",
         "projectName": "VideoConference.Tests",
-        "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj",
+        "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\VideoConference.Tests.csproj",
         "packagesPath": "C:\\Users\\ad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\obj\\",
+        "outputPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\tests\\VideoConference.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -436,17 +436,17 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj": {
-                "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj"
+              "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj": {
+                "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.API\\VideoConference.API.csproj"
               },
-              "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj": {
-                "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj"
+              "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj": {
+                "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Application\\VideoConference.Application.csproj"
               },
-              "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj": {
-                "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj"
+              "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj": {
+                "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Domain\\VideoConference.Domain.csproj"
               },
-              "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj"
+              "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj": {
+                "projectPath": "c:\\Users\\ad\\dev\\Video-Conference-Info-Bank\\src\\VideoConference.Infrastructure\\VideoConference.Infrastructure.csproj"
               }
             }
           }

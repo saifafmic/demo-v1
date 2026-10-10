@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VideoConference.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35826bff5a2a7f6f1e4b179eb40ae969f445d524")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba4bc48516c1e8be1850ece04f8347065672af26")]
 [assembly: System.Reflection.AssemblyProductAttribute("VideoConference.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VideoConference.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

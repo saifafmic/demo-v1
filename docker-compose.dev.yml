@@ -1,0 +1,48 @@
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: videoconference-mssql
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Strong_Dev_Password_2026!
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    networks:
+      - videoconference-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: videoconference-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - videoconference-net
+
+  livekit:
+    image: livekit/livekit-server:latest
+    container_name: videoconference-livekit
+    restart: unless-stopped
+    command: --dev --bind 0.0.0.0 --redis-host redis:6379
+    ports:
+      - "7880:7880"
+      - "7881:7881"
+      - "50000-50050:50000-50050/udp"
+    depends_on:
+      - redis
+    networks:
+      - videoconference-net
+
+volumes:
+  mssql_data:
+  redis_data:
+
+networks:
+  videoconference-net:
+    driver: bridge
