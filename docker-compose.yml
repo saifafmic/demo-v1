@@ -32,7 +32,9 @@ services:
     image: livekit/livekit-server:latest
     container_name: videoconference-livekit
     restart: unless-stopped
-    command: --dev --bind 0.0.0.0 --redis-host redis:6379
+    command: --dev --bind 0.0.0.0 --redis-host redis:6379 --node-ip 127.0.0.1
+    environment:
+      - 'LIVEKIT_KEYS=devkey: SuperSecretLiveKitKeyMustBe32BytesLong!'
     ports:
       - "7880:7880"
       - "7881:7881"
@@ -56,6 +58,9 @@ services:
       - ConnectionStrings__DefaultConnection=Server=mssql,1433;Database=videoconference;User Id=sa;Password=Strong_Dev_Password_2026!;TrustServerCertificate=True;
       - Cors__AllowedOrigins__0=http://localhost:3000
       - Cors__AllowedOrigins__1=http://localhost
+      - LiveKit__Url=ws://localhost:7880
+      - LiveKit__ApiKey=devkey
+      - LiveKit__ApiSecret=SuperSecretLiveKitKeyMustBe32BytesLong!
     ports:
       - "5000:5000"
     depends_on:
