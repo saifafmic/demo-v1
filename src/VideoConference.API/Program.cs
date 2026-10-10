@@ -196,6 +196,7 @@ using (var scope = app.Services.CreateScope())
     catch (Exception ex)
     {
         logger.LogError(ex, "An error occurred while creating or migrating the database.");
+        throw;
     }
 }
 
